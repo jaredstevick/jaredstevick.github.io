@@ -1,3 +1,5 @@
+'use strict';
+
 $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
@@ -20,5 +22,5 @@ $(function() {
 
 $('#submitForm').on('click', function(){
     $('#contactForm')[0].reset();
-    alert("Your message has been sent. Thank you.")
+    alert('Your message has been sent. Thank you.');
 });
