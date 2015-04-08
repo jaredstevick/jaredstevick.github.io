@@ -20,9 +20,9 @@ $(function() {
   });
 });
 
-var alert;
+
 
 $('#submitForm').on('click', function(){
     $('#contactForm')[0].reset();
-    alert('Your message has been sent. Thank you.');
 });
+
