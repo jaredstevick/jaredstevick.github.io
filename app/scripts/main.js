@@ -29,6 +29,26 @@ $(window).scroll(function() {
     }
 });
 
+
+$.ajax({
+    url: "http://api.tumblr.com/v2/blog/jaredstevick.tumblr.com/posts?api_key=1yLHFpQZusNUtc3ITApvq919tz8ZBJxI7qQxd2DiMOg0Iawa6Z",
+    dataType: 'jsonp',
+    success: function(posts){
+    	console.log(posts);
+    var postings = posts.response.posts;
+	var text = '';
+	for (var i in postings) {
+  	var p = postings[i];
+	text += '<li id="posts"><div id="postTitle"><a href='+ p.post_url +'>'+ p.title +'</a></div>' + p.description + '</li>';
+	$('#posts').append(text);
+	};
+    }
+});
+
+
+
+
+
 $('#submitForm').on('click', function(){
 	alert("Thanks for getting in touch. I look forward to talking with you!");
     $('#contactForm')[0].reset();
