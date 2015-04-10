@@ -1,6 +1,10 @@
 'use strict';
 
-$(document).ready(function(){
+angular.module("Portfolio",[])
+
+.controller('MainCtrl', ['$http', function($http){
+
+
 
 $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
@@ -30,19 +34,29 @@ $(window).scroll(function() {
 });
 
 
-$.ajax({
-    url: "http://api.tumblr.com/v2/blog/jaredstevick.tumblr.com/posts?api_key=1yLHFpQZusNUtc3ITApvq919tz8ZBJxI7qQxd2DiMOg0Iawa6Z",
-    dataType: 'jsonp',
-    success: function(posts){
-    	console.log(posts);
-    var postings = posts.response.posts;
-	var text = '';
-	for (var i in postings) {
-  	var p = postings[i];
-	text += '<li id="posts"><div id="postTitle"><a href='+ p.post_url +'>'+ p.title +'</a></div>' + p.description + '</li>';
-	$('#posts').append(text);
-	};
-    }
+// $.ajax({
+//     url: "http://api.tumblr.com/v2/blog/jaredstevick.tumblr.com/posts?api_key=1yLHFpQZusNUtc3ITApvq919tz8ZBJxI7qQxd2DiMOg0Iawa6Z",
+//     dataType: 'jsonp',
+//     success: function(posts){
+//     	console.log(posts);
+//     var postings = posts.response.posts;
+// 	var text = '';
+// 	for (var i in postings) {
+//   	var p = postings[i];
+// 	text += '<li id="posts"><div id="postTitle"><a href='+ p.post_url +'>'+ p.title +'</a></div>' + p.description + '</li>';
+// 	$('#postscontainer').append(text);
+// 	};
+//     }
+// });
+
+var self = this;
+
+
+$http.jsonp("http://api.tumblr.com/v2/blog/jaredstevick.tumblr.com/posts?api_key=1yLHFpQZusNUtc3ITApvq919tz8ZBJxI7qQxd2DiMOg0Iawa6Z&callback=JSON_CALLBACK")
+.success(function(data) {
+	console.log(data);
+	self.posts = data.response.posts; 
+	console.log(self.posts)
 });
 
 
@@ -54,5 +68,6 @@ $('#submitForm').on('click', function(){
     $('#contactForm')[0].reset();
 });
 
-});
 
+
+}]);
