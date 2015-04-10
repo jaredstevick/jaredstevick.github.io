@@ -256,11 +256,16 @@ li .tech {
   background-color: #2c3e50;
   padding: 2ex;
   width: 100%;
+  margin-bottom: 2ex;
   a {
     text-decoration: none;
     color: #FFF;
     font-size: 2em;
   }
+  span {
+    border-left: 2px solid darkgray;
+  }
+
 }
 }
 
