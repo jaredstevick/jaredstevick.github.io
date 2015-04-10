@@ -24,13 +24,13 @@ gulp.task('styles', function () {
     .pipe(reload({stream: true}));
 });
 
-// gulp.task('jshint', function () {
-//   return gulp.src('app/scripts/**/*.js')
-//     .pipe(reload({stream: true, once: true}))
-//     .pipe($.jshint())
-//     .pipe($.jshint.reporter('jshint-stylish'))
-//     .pipe($.if(!browserSync.active, $.jshint.reporter('fail')));
-// });
+gulp.task('jshint', function () {
+  // return gulp.src('app/scripts/**/*.js')
+  //   .pipe(reload({stream: true, once: true}))
+  //   .pipe($.jshint())
+  //   .pipe($.jshint.reporter('jshint-stylish'))
+  //   .pipe($.if(!browserSync.active, $.jshint.reporter('fail')));
+});
 
 gulp.task('html', ['styles'], function () {
   var assets = $.useref.assets({searchPath: ['.tmp', 'app', '.']});
