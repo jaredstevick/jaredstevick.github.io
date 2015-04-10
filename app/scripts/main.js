@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module("Portfolio",[])
+angular.module('Portfolio',[])
 
 .controller('MainCtrl', ['$http', function($http){
 
@@ -35,13 +35,12 @@ $(window).scroll(function() {
 
 var self = this;
 
-$http.jsonp("http://api.tumblr.com/v2/blog/jaredstevick.tumblr.com/posts?api_key=1yLHFpQZusNUtc3ITApvq919tz8ZBJxI7qQxd2DiMOg0Iawa6Z&filter=text&callback=JSON_CALLBACK")
+$http.jsonp('http://api.tumblr.com/v2/blog/jaredstevick.tumblr.com/posts?api_key=1yLHFpQZusNUtc3ITApvq919tz8ZBJxI7qQxd2DiMOg0Iawa6Z&filter=text&callback=JSON_CALLBACK')
 .success(function(data) {
 	self.posts = data.response.posts;
 });
 
 $('#submitForm').on('click', function(){
-	alert("Thanks for getting in touch. I look forward to talking with you!");
     $('#contactForm')[0].reset();
 });
 
