@@ -33,41 +33,18 @@ $(window).scroll(function() {
     }
 });
 
-
-// $.ajax({
-//     url: "http://api.tumblr.com/v2/blog/jaredstevick.tumblr.com/posts?api_key=1yLHFpQZusNUtc3ITApvq919tz8ZBJxI7qQxd2DiMOg0Iawa6Z",
-//     dataType: 'jsonp',
-//     success: function(posts){
-//     	console.log(posts);
-//     var postings = posts.response.posts;
-// 	var text = '';
-// 	for (var i in postings) {
-//   	var p = postings[i];
-// 	text += '<li id="posts"><div id="postTitle"><a href='+ p.post_url +'>'+ p.title +'</a></div>' + p.description + '</li>';
-// 	$('#postscontainer').append(text);
-// 	};
-//     }
-// });
-
 var self = this;
 
-
-$http.jsonp("http://api.tumblr.com/v2/blog/jaredstevick.tumblr.com/posts?api_key=1yLHFpQZusNUtc3ITApvq919tz8ZBJxI7qQxd2DiMOg0Iawa6Z&callback=JSON_CALLBACK")
+$http.jsonp("http://api.tumblr.com/v2/blog/jaredstevick.tumblr.com/posts?api_key=1yLHFpQZusNUtc3ITApvq919tz8ZBJxI7qQxd2DiMOg0Iawa6Z&filter=text&callback=JSON_CALLBACK")
 .success(function(data) {
-	console.log(data);
-	self.posts = data.response.posts; 
-	console.log(self.posts)
+	self.posts = data.response.posts;
 });
-
-
-
-
 
 $('#submitForm').on('click', function(){
 	alert("Thanks for getting in touch. I look forward to talking with you!");
     $('#contactForm')[0].reset();
 });
 
-
+console.log("So you like to look under the hood? Why don't you check out my Github? http://github.com/jaredstevick");
 
 }]);

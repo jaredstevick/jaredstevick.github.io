@@ -51,8 +51,8 @@ $icon-font-path: '../fonts/';
   -o-background-size: cover;
   background-size: cover;
   min-height: 100vh;
+  text-align: center;
     h1, h2, h3 {
-      text-align: center;
       color: #FFFFFF;
       font-family: 'Cabin', sans-serif; 
     }
@@ -60,16 +60,23 @@ $icon-font-path: '../fonts/';
       font-size: 13ex;
       margin: 2ex auto;
     }
-
     h2 {
       margin-top: 12ex;
     }
     h3 {
       margin: 4ex;
     }
-
     h2, h3 {
       word-spacing: 1em;
+    }
+    .btn-more {
+      margin-top: 10ex;
+    }
+    i {
+      color: #fff;
+    }
+    i:hover {
+      color: #337AB7
     }
     @media(max-width:320px) {
       h1 {
@@ -77,7 +84,6 @@ $icon-font-path: '../fonts/';
       }
       h2, h3 {
         font-size: 1em;
-
       }
     }
 }
@@ -99,6 +105,7 @@ $icon-font-path: '../fonts/';
 
 #about p {
   font-size: 1.1em;
+  margin: 3ex 0;
 }
 
 #portfolio {
@@ -244,12 +251,8 @@ li .tech {
   li {
     list-style: none;
     margin: 6ex 0;
-    blockquote {
-    }
   }
-}
-
-#postTitle {
+  div {
   background-color: #2c3e50;
   padding: 2ex;
   width: 100%;
@@ -259,6 +262,9 @@ li .tech {
     font-size: 2em;
   }
 }
+}
+
+
 
 #resume {
   margin: 0 auto;
@@ -338,7 +344,7 @@ footer .footer-below {
     background-color: #233140;
 }
 
-.btn-social {
+.btn-social, .btn-more {
     display: inline-block;
     width: 50px;
     height: 50px;
