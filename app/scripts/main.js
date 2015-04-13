@@ -26,7 +26,7 @@ $(function() {
 });
 
 $(window).scroll(function() {
-    if($(this).scrollTop() > 350) {
+    if($(this).scrollTop() > 5) {
         $('.navbar-fixed-top').addClass('opaque');
     } else {
         $('.navbar-fixed-top').removeClass('opaque');
@@ -38,7 +38,10 @@ var self = this;
 $http.jsonp('http://api.tumblr.com/v2/blog/jaredstevick.tumblr.com/posts?api_key=1yLHFpQZusNUtc3ITApvq919tz8ZBJxI7qQxd2DiMOg0Iawa6Z&filter=text&callback=JSON_CALLBACK')
 .success(function(data) {
 	self.posts = data.response.posts;
+	console.log(self.posts)
 });
+
+
 
 $('#submitForm').on('click', function(){
     $('#contactForm')[0].reset();
