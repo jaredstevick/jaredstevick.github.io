@@ -454,7 +454,6 @@
         <h2>Blog</h2>
         <hr>
         <h4>Most Recent Posts from Tumblr</h4>
-        <p>(click on titles to view full posts)</p>
         <article>
           <ul id="postscontainer">
             <li ng-repeat="post in main.posts">
@@ -463,9 +462,14 @@
                   <h4>{{post.title}}{{post.caption}}</h4>
                 </a>
               </div>
-                <span>  
-                <p>{{post.description}} {{post.body}}{{post.player[2].embed_code}}</p>
-                <p>Posted on {{post.date.substring(6, post.date.length -13)}}-{{post.date.substring(0, post.date.length -19)}}</p>
+                <span> 
+                <p>
+                  {{post.description}} 
+                  {{post.body}}{{post.player[2].embed_code}}
+                  <a ng-href={{post.post_url}}>Read More...</a>
+                </p>
+                <p>Posted on 
+                {{post.date.substring(6, post.date.length -13)}}-{{post.date.substring(0, post.date.length -19)}}</p>
                 </span>
             </li> 
           </ul>
@@ -584,6 +588,7 @@
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
     <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-sanitize/angular-sanitize.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
