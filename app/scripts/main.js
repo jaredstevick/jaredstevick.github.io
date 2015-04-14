@@ -1,10 +1,8 @@
 'use strict';
 
-angular.module('Portfolio',[])
+angular.module('Portfolio',['ngSanitize'])
 
-.controller('MainCtrl', ['$http', function($http){
-
-
+.controller('MainCtrl', ['$http', '$scope', '$sce', function($http, $scope, $sce){
 
 $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
@@ -35,10 +33,13 @@ $(window).scroll(function() {
 
 var self = this;
 
-$http.jsonp('http://api.tumblr.com/v2/blog/jaredstevick.tumblr.com/posts?api_key=1yLHFpQZusNUtc3ITApvq919tz8ZBJxI7qQxd2DiMOg0Iawa6Z&filter=text&callback=JSON_CALLBACK')
+$http.jsonp('http://api.tumblr.com/v2/blog/jaredstevick.tumblr.com/posts?api_key=1yLHFpQZusNUtc3ITApvq919tz8ZBJxI7qQxd2DiMOg0Iawa6Z&filter=text&limit=3&callback=JSON_CALLBACK')
 .success(function(data) {
 	self.posts = data.response.posts;
-	console.log(self.posts)
+	console.log(self.posts);
+	$scope.trustThisHtml = function(html) {
+    return $sce.trustAsHtml(html);
+    };
 });
 
 

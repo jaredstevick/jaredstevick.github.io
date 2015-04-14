@@ -383,7 +383,7 @@
                   <h2>Vertical Timeline</h2>
                   <hr>
                   <img src="http://res.cloudinary.com/jaredstevick/image/upload/v1428340271/Vertical_Timeline_4_0med_xts20y.png" class="img-responsive img-centered" alt="">
-                  <p>This responsive, mobile-friendly site has a fluid design that responds with varying layouts for different screen sizes. The clean design includes icons from Font-Awesome and it also includes my favorite filler text "Far far away", available at <a href="http://www.blindtextgenerator.com/lorem-ipsum">Blind Text Generator</a></p>
+                  <p>This responsive, mobile-friendly site has a fluid design that responds with varying layouts for different screen sizes. The clean design includes icons from Font-Awesome and utilizes my favorite filler text "Far far away", available at <a href="http://www.blindtextgenerator.com/lorem-ipsum">Blind Text Generator.</a></p>
                   <ul class="list-inline">
                     <li><img class="tech" src="http://res.cloudinary.com/jaredstevick/image/upload/v1428348826/http_stephenplusplus.github.io_yeoman.io_assets_img_yeoman-003_qc86dd.png"></li>
                     <li><img class="tech" src="http://res.cloudinary.com/jaredstevick/image/upload/v1427223175/h52a9emom5vtxrsf5fqf.png"></li>
@@ -463,11 +463,12 @@
                 </a>
               </div>
                 <span> 
-                <p>
-                  {{post.description}} 
-                  {{post.body}}{{post.player[2].embed_code}}
-                  <a ng-href={{post.post_url}}>Read More...</a>
-                </p>
+                  <i class="video" ng-bind-html="trustThisHtml(post.player[1].embed_code)"></i>
+                  <p>
+                    {{post.description}} 
+                    {{post.body}}
+                    <a ng-href={{post.post_url}}>Read More...</a>
+                  </p>
                 <p>Posted on 
                 {{post.date.substring(6, post.date.length -13)}}-{{post.date.substring(0, post.date.length -19)}}</p>
                 </span>
