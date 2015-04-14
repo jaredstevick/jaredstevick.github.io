@@ -33,12 +33,13 @@ $icon-font-path: '../fonts/';
   font-size: 2ex;
 } 
 
-
-
 .navbar {
   padding-right: 2em;
 }
 
+.navbar-toggle {
+  margin-right: 0;
+}
 .navbar-inverse .navbar-brand {
   color: #FFF;
   font-family: 'Cabin', sans-serif;
@@ -90,14 +91,6 @@ $icon-font-path: '../fonts/';
     color: #337AB7
   }
   
-  @media(min-width: 375px) and (max-width: 414px) {
-    h2 {
-      margin-top: -5ex;
-    }
-    h3 {
-      margin-top: 10ex;
-    }
-  }
   @media(max-width:415px) {
     h1 {
       font-size: 2.5em;
@@ -397,21 +390,53 @@ footer .footer-below {
 
 /* media-queries */
   @include iphone3(portrait) {
-    h1 {
+    .jumbotron h1 {
       font-size: 2em;
       margin: 4ex auto;
     }
-    h2, h3 {
-      margin: auto;
+    .jumbotron h2, h3 {
       font-size: 1em;
     }
+    .jumbotron h2 {
+      margin: auto;
+    }
+    .jumbotron h3 {
+      font-size: 2ex;
+      margin-bottom: 24ex;
+    }
   }
- //  @include iphone4(portrait) {
- //    h1 {
- //      font-size: 50%;
- //    }
- // }
 
+  @include iphone4(portrait) {
+    .jumbotron h2 {
+      margin: auto;
+    }
+    .jumbotron h3 {
+      font-size: 2ex;
+      margin-top: 16ex;
+      margin-bottom: 2ex;
+    }
+  }  
+
+  @include iphone6(portrait) {
+    .jumbotron {
+      h2 {
+        margin-top: 2ex;
+        margin-bottom: 24ex;
+      }
+      h3 {
+        font-size: 3ex;
+      }
+    }
+  }
+
+  @include iphone6-plus(portrait) {  
+    .jumbotron {
+      h2 {
+        margin-top: auto;
+        margin-bottom: 30ex;
+      }
+    }
+  }    
 
 @media print {
   #dontprint a[href]:after {
