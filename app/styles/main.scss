@@ -17,7 +17,8 @@ $icon-font-path: '../fonts/';
   background-color: transparent;
   transition: background-color 1s ease 0s;
   border-bottom: none;
-  letter-spacing: 1px
+  letter-spacing: 1px;
+  padding-right: 1em;
 }
 
 .opaque { 
@@ -32,10 +33,6 @@ $icon-font-path: '../fonts/';
   color: #337AB7;
   font-size: 2ex;
 } 
-
-.navbar {
-  padding-right: 2em;
-}
 
 .navbar-toggle {
   margin-right: 0;
@@ -443,6 +440,7 @@ footer .footer-below {
     content: none !important;
   }
 }
+
 
 
 
