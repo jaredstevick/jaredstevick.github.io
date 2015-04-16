@@ -246,7 +246,7 @@ $icon-font-path: '../fonts/';
 }
 
 .modal-body img {
-  max-height: 75vh;
+  max-height: 50vh;
   margin: auto;
 }
 
@@ -363,14 +363,14 @@ li .tech {
     resize: none;
 }
 
-.btn-default {
+.btn-lg {
   margin-bottom: 4ex;
   background-color: #2c3e50;
   border: #233140;
-  color: #FFF;
+  color: #FFF;  
 }
 
-.btn-default:hover, .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active{
+.btn-lg:hover, .btn-lg:focus, .btn-lg.focus, .btn-lg:active, .btn-lg.active{
   background-color: #337AB7;
   border: #2c3e50;
   color: #FFF;
