@@ -29,10 +29,20 @@ $icon-font-path: '../fonts/';
 .navbar-inverse .navbar-nav > .active > a,
 .navbar-inverse .navbar-nav > .active > a:hover,
 .navbar-inverse .navbar-nav > .active > a:focus {
-  background-color: #233140;
+  background-color: transparent;
   color: #337AB7;
-  font-size: 2ex;
+
+  -webkit-transition: all ease .5s;
+  -moz-transition: all ease .5s;
+  transition: all ease .5s;
+
 } 
+
+// .navbar-inverse .navbar-nav > .active,
+// .navbar-inverse .navbar-nav > .active:hover,
+// .navbar-inverse .navbar-nav > .active:focus {
+//   background-color: transparent;
+// }
 
 .navbar-toggle {
   margin-right: 0;
@@ -45,10 +55,16 @@ $icon-font-path: '../fonts/';
 .navbar-inverse .navbar-nav > li > a {
   color: #FFF;
   font-family: sans-serif;
+  -webkit-transition: all ease .25s;
+  -moz-transition: all ease .25s;
+  transition: all ease .25s;
 }
 
 .navbar-inverse .navbar-nav > li > a:hover {
   color: #337AB7;
+  -webkit-transition: all ease .25s;
+  -moz-transition: all ease .25s;
+  transition: all ease .25s;
 }
 
 .jumbotron {
@@ -85,7 +101,10 @@ $icon-font-path: '../fonts/';
     color: #fff;
   }
   i:hover {
-    color: #337AB7
+    color: #337AB7;
+    -webkit-transition: all ease .5s;
+    -moz-transition: all ease .5s;
+    transition: all ease .5s;
   }
   
   @media(max-width:415px) {
@@ -142,9 +161,9 @@ $icon-font-path: '../fonts/';
     height: 100%;
     opacity: 0;
     background: rgba(0,0,0,.85);
-    -webkit-transition: all ease .5s;
-    -moz-transition: all ease .5s;
-    transition: all ease .5s;
+    -webkit-transition: all ease 1s;
+    -moz-transition: all ease 1s;
+    transition: all ease 1s;
 }
 
 #portfolio .portfolio-item .portfolio-link .caption:hover {
@@ -277,6 +296,9 @@ li .tech {
   }
   span {
     font-size: 2ex;
+    a:hover {
+      text-decoration: none;
+    }
   }
   .video {
     display: none;
