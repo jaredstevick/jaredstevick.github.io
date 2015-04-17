@@ -31,7 +31,6 @@ $icon-font-path: '../fonts/';
 .navbar-inverse .navbar-nav > .active > a:focus {
   background-color: transparent;
   color: #337AB7;
-
   -webkit-transition: all ease .5s;
   -moz-transition: all ease .5s;
   transition: all ease .5s;
@@ -54,7 +53,7 @@ $icon-font-path: '../fonts/';
 
 .navbar-inverse .navbar-nav > li > a {
   color: #FFF;
-  font-family: sans-serif;
+  font-family: 'Cabin';
   -webkit-transition: all ease .25s;
   -moz-transition: all ease .25s;
   transition: all ease .25s;
@@ -128,6 +127,9 @@ $icon-font-path: '../fonts/';
 
 #about, #portfolio, #blog, #resume, #contact {
   padding-top: 50px;
+  h2 {
+    font-family: 'Lato';
+  }
 }
 
 #about, #portfolio, #resume {
