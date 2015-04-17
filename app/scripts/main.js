@@ -31,6 +31,10 @@ $(window).scroll(function() {
     }
 });
 
+$('.carousel').carousel({
+  interval: 5000 //changes the speed
+})
+
 var self = this;
 
 $http.jsonp('http://api.tumblr.com/v2/blog/jaredstevick.tumblr.com/posts?api_key=1yLHFpQZusNUtc3ITApvq919tz8ZBJxI7qQxd2DiMOg0Iawa6Z&filter=text&limit=3&callback=JSON_CALLBACK')
