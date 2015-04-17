@@ -52,6 +52,8 @@ $('#submitForm').on('click', function(){
     $('#contactForm')[0].reset();
 });
 
+$(function () { $("[data-toggle='tooltip']").tooltip(); });
+
 console.log("So you like to look under the hood? Why don't you check out my Github? http://github.com/jaredstevick");
 
 }]);
