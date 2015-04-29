@@ -452,60 +452,10 @@ footer .footer-below {
 .btn.active {
     outline: 0;
 }
-
-/* media-queries */
-  // @include iphone3(portrait) {
-  //   .jumbotron h1 {
-  //     font-size: 2em;
-  //     margin: 4ex auto;
-  //   }
-  //   .jumbotron h2, h3 {
-  //     font-size: 1em;
-  //   }
-  //   .jumbotron h2 {
-  //     margin: auto;
-  //   }
-  //   .jumbotron h3 {
-  //     font-size: 2ex;
-  //     margin-bottom: 24ex;
-  //   }
-  // }
-
-  // @include iphone4(portrait) {
-  //   .jumbotron h2 {
-  //     margin: auto;
-  //   }
-  //   .jumbotron h3 {
-  //     font-size: 2ex;
-  //     margin-top: 16ex;
-  //     margin-bottom: 2ex;
-  //   }
-  // }  
-
-  // @include iphone6(portrait) {
-  //   .jumbotron {
-  //     h2 {
-  //       margin-top: 2ex;
-  //       margin-bottom: 24ex;
-  //     }
-  //     h3 {
-  //       font-size: 3ex;
-  //     }
-  //   }
-  // }
-
-  // @include iphone6-plus(portrait) {  
-  //   .jumbotron {
-  //     h2 {
-  //       margin-top: auto;
-  //       margin-bottom: 30ex;
-  //     }
-  //   }
-  // }    
+  
 
 @media print {
   #dontprint a[href]:after {
     content: none !important;
   }
 }
-
