@@ -53,6 +53,8 @@ $('#submitForm').on('click', function(){
 
 $(function () { $("[data-toggle='tooltip']").tooltip(); });
 
+
+
 console.log("So you like to look under the hood? Why don't you check out my Github? http://github.com/jaredstevick");
 
 }]);
